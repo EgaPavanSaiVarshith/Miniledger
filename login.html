@@ -1,1 +1,34 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | MiniLedger</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body class="login-body">
+  <div class="login-container">
+    <div class="login-card">
+      <div class="login-card-left">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Student Login" />
+        <h1>MiniLedger</h1>
+        <p>Track your expenses, set goals, and visualize your student finances.</p>
+      </div>
+      <div class="login-card-right">
+        <div class="login-tabs">
+          <button id="tab-signin" class="login-tab active">Sign In</button>
+          <button id="tab-signup" class="login-tab">Sign Up</button>
+        </div>
+        <form id="auth-form" class="login-form">
+          <input type="text" id="username" placeholder="Username" required autocomplete="username" />
+          <input type="password" id="password" placeholder="Password" required autocomplete="current-password" />
+          <input type="password" id="signup-password2" placeholder="Confirm Password" style="display:none;" autocomplete="new-password" />
+          <button type="submit" id="auth-btn" class="cta-btn">Sign In</button>
+          <button type="button" id="demo-btn" class="cta-btn">Try Demo</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="login.js"></script>
+</body>
+</html>
