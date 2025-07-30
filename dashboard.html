@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MiniLedger - Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-logo">MiniLedger</div>
+    <ul class="navbar-links">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Features</a></li>
+      <li><a href="#">Tips</a></li>
+      <li><a href="#">Goals</a></li>
+    </ul>
+  </nav>
+  <main class="dashboard">
+    <div class="dashboard-hero">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Student" class="dashboard-hero-img" />
+      <div class="dashboard-hero-text">
+        <h1>Welcome to MiniLedger</h1>
+        <p>Track your expenses smartly!</p>
+        <blockquote class="dashboard-quote">“A budget is telling your money where to go instead of wondering where it went.”</blockquote>
+      </div>
+    </div>
+    <div class="summary-section">
+      <div class="summary-item">
+        <span>Total Spent:</span> <span id="total-spent">$0</span>
+      </div>
+      <div class="summary-item">
+        <span>Remaining Amount:</span> <span id="remaining-amount">$0</span>
+      </div>
+      <div class="summary-item">
+        <span>Total Expenses:</span> <span id="total-expenses">0</span>
+      </div>
+      <div class="summary-item">
+        <span>Categories Used:</span> <span id="categories-used">0</span>
+      </div>
+      <div class="summary-item">
+        <span>Last Expense:</span> <span id="last-expense">-</span>
+      </div>
+    </div>
+    <form id="expense-form">
+      <input type="number" id="amount" placeholder="Amount" required />
+      <select id="category">
+        <option>Food</option>
+        <option>Study</option>
+        <option>Transport</option>
+      </select>
+      <input type="text" id="description" placeholder="Description" />
+      <button type="submit">Add Expense</button>
+    </form>
+    <div id="expense-list"></div>
+    <div class="charts-section">
+      <div class="chart-card">
+        <h3>Spending by Category</h3>
+        <canvas id="barChart" width="350" height="220"></canvas>
+      </div>
+      <div class="chart-card">
+        <h3>Spending Distribution</h3>
+        <canvas id="pieChart" width="350" height="220"></canvas>
+      </div>
+    </div>
+    <button id="logout-btn">Logout</button>
+    <section class="dashboard-sections">
+      <div class="dashboard-section">
+        <h2>Features</h2>
+        <ul>
+          <li>Easy expense entry with categories and notes</li>
+          <li>Interactive bar and pie charts for instant insights</li>
+          <li>Personal budget tracking and remaining balance</li>
+          <li>Quick stats: total spent, unique categories, last activity</li>
+          <li>Secure, private, and student-friendly design</li>
+        </ul>
+      </div>
+      <div class="dashboard-section">
+        <h2>Tips</h2>
+        <ul>
+          <li>Record every expense, no matter how small</li>
+          <li>Review your spending patterns at the end of each week</li>
+          <li>Set a monthly savings goal and track your progress</li>
+          <li>Use categories to identify where you can cut back</li>
+          <li>Check your dashboard regularly to stay on track</li>
+        </ul>
+      </div>
+      <div class="dashboard-section">
+        <h2>Goals</h2>
+        <ul>
+          <li>Maintain a daily log of all expenses for 30 days</li>
+          <li>Limit eating out to twice a week</li>
+          <li>Save ₹500 each month for future needs</li>
+          <li>Reduce impulse purchases by 50%</li>
+          <li>Build a habit of reviewing your finances every Sunday</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
